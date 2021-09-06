@@ -1,0 +1,4 @@
+/front-tasklist/node_modules
+/back-tasklist/node_modules
+
+**/node_modules

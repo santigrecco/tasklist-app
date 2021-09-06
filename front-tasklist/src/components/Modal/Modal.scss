@@ -1,0 +1,15 @@
+@import "../../vars.scss";
+
+.modal-container {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

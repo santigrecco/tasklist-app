@@ -1,0 +1,49 @@
+@import "../../vars.scss";
+
+.task {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: $secondary;
+  color: white;
+  flex-direction: column;
+  cursor: pointer;
+
+  .title {
+    font-weight: 400;
+  }
+
+  .id {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.task-modal {
+  display: flex;
+  background-color: white;
+  color: $black;
+  flex-direction: column;
+  padding: 24px;
+  max-width: 100%;
+  cursor: default;
+
+  .data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .complete {
+    margin-right: 12px;
+  }
+}

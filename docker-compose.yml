@@ -1,0 +1,35 @@
+version: "3"
+services:
+  react-app:
+    build: ./front-tasklist
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - tasklist
+
+  api-server:
+    build: ./back-tasklist
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+    networks:
+      - tasklist
+
+  mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - tasklist
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  tasklist:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
